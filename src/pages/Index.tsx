@@ -30,7 +30,7 @@ const FEATURES = [
   {
     icon: 'MessageSquare',
     title: 'Диалог вместо ТЗ',
-    text: 'Просто опишите идею словами. РобоВэп задаёт уточняющие вопросы и сам собирает сайт.',
+    text: 'Просто опишите идею словами. Roboweb задаёт уточняющие вопросы и сам собирает сайт.',
   },
   {
     icon: 'Zap',
@@ -60,7 +60,7 @@ const FEATURES = [
 ];
 
 const STEPS = [
-  { n: '01', title: 'Опишите задачу', text: 'Расскажите РобоВэпу, какой сайт нужен и для кого.' },
+  { n: '01', title: 'Опишите задачу', text: 'Расскажите Roboweb, какой сайт нужен и для кого.' },
   { n: '02', title: 'AI создаёт сайт', text: 'Нейросеть собирает структуру, дизайн и тексты под вашу нишу.' },
   { n: '03', title: 'Правите в диалоге', text: 'Меняете что угодно простыми словами — без кода и дизайнеров.' },
   { n: '04', title: 'Публикуете онлайн', text: 'Один клик — сайт в сети, с доменом, SSL и хостингом.' },
@@ -105,7 +105,7 @@ const PLANS = [
 const FAQ = [
   {
     q: 'Может ли AI правда заменить фрилансера?',
-    a: 'Да. РобоВэп создаёт сайты уровня агентства, но в десятки раз быстрее и дешевле. Вы общаетесь словами, а нейросеть делает всю техническую работу.',
+    a: 'Да. Roboweb создаёт сайты уровня агентства, но в десятки раз быстрее и дешевле. Вы общаетесь словами, а нейросеть делает всю техническую работу.',
   },
   {
     q: 'Сколько времени занимает создание сайта?',
@@ -113,11 +113,11 @@ const FAQ = [
   },
   {
     q: 'Нужно ли уметь программировать?',
-    a: 'Нет. Достаточно описать идею обычным языком. РобоВэп сам напишет код, подберёт дизайн и опубликует сайт.',
+    a: 'Нет. Достаточно описать идею обычным языком. Roboweb сам напишет код, подберёт дизайн и опубликует сайт.',
   },
   {
     q: 'Чем это лучше обычного конструктора?',
-    a: 'Конструкторы требуют ручной сборки из шаблонов. РобоВэп понимает вашу задачу и создаёт уникальный сайт под неё — без ограничений шаблонов.',
+    a: 'Конструкторы требуют ручной сборки из шаблонов. Roboweb понимает вашу задачу и создаёт уникальный сайт под неё — без ограничений шаблонов.',
   },
   {
     q: 'Можно ли подключить свой домен?',
@@ -174,7 +174,7 @@ const Index = () => {
             <span className="grid h-9 w-9 place-items-center rounded-xl bg-primary text-primary-foreground">
               <Icon name="Bot" size={20} />
             </span>
-            РобоВэп
+            Roboweb
           </a>
           <div className="hidden md:flex items-center gap-7 text-sm font-medium text-muted-foreground">
             {NAV.map((n) => (
@@ -203,7 +203,7 @@ const Index = () => {
               Сайты создаёт <span className="text-gradient">искусственный интеллект</span>
             </h1>
             <p className="mt-6 text-lg text-muted-foreground max-w-xl">
-              РобоВэп заменяет фрилансеров и конструкторы. Опишите идею в диалоге — и получите
+              Roboweb заменяет фрилансеров и конструкторы. Опишите идею в диалоге — и получите
               готовый сайт за минуты, а не недели.
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
@@ -238,7 +238,7 @@ const Index = () => {
             <div className="absolute inset-0 -z-10 rounded-[2.5rem] bg-gradient-to-tr from-primary/10 to-accent/20 blur-2xl" />
             <img
               src={ROBO_IMG}
-              alt="РобоВэп — AI-помощник"
+              alt="Roboweb — AI-помощник"
               className="mx-auto w-64 md:w-72 drop-shadow-2xl animate-float rounded-3xl"
             />
             <div className="glass rounded-3xl p-5 shadow-2xl mt-[-2rem] mx-auto max-w-md">
@@ -246,7 +246,7 @@ const Index = () => {
                 <span className="grid h-7 w-7 place-items-center rounded-lg bg-primary text-primary-foreground">
                   <Icon name="Bot" size={15} />
                 </span>
-                <span className="font-display font-bold text-sm">РобоВэп онлайн</span>
+                <span className="font-display font-bold text-sm">Roboweb онлайн</span>
                 <span className="ml-auto flex items-center gap-1 text-xs text-muted-foreground">
                   <span className="h-2 w-2 rounded-full bg-[hsl(88,70%,45%)] animate-glow" /> печатает…
                 </span>
@@ -344,7 +344,7 @@ const Index = () => {
             <div className="text-center max-w-2xl mx-auto">
               <span className="text-sm font-semibold uppercase tracking-widest text-primary">Портфолио</span>
               <h2 className="mt-3 font-display font-black text-4xl md:text-5xl tracking-tight">
-                Сайты, созданные РобоВэпом
+                Сайты, созданные Roboweb
               </h2>
               <p className="mt-4 text-muted-foreground text-lg">
                 Реальные проекты и результаты бизнеса, которые отказались от фрилансеров.
@@ -446,7 +446,7 @@ const Index = () => {
                   Создайте первый сайт уже сегодня
                 </h2>
                 <p className="mt-4 text-background/70 text-lg max-w-xl mx-auto">
-                  Оставьте e-mail — и РобоВэп начнёт работу. Без карты, без рисков.
+                  Оставьте e-mail — и Roboweb начнёт работу. Без карты, без рисков.
                 </p>
                 <form
                   onSubmit={(e) => e.preventDefault()}
@@ -514,7 +514,7 @@ const Index = () => {
               <span className="grid h-9 w-9 place-items-center rounded-xl bg-primary text-primary-foreground">
                 <Icon name="Bot" size={20} />
               </span>
-              РобоВэп
+              Roboweb
             </a>
             <p className="mt-4 text-sm text-muted-foreground max-w-xs">
               AI-конструктор, который создаёт сайты в диалоге и заменяет фрилансеров.
@@ -536,7 +536,7 @@ const Index = () => {
             <h4 className="font-display font-bold mb-4">Контакты</h4>
             <ul className="space-y-3 text-sm text-muted-foreground">
               <li className="flex items-center gap-2">
-                <Icon name="Mail" size={16} className="text-primary" /> hello@robowap.ru
+                <Icon name="Mail" size={16} className="text-primary" /> hello@roboweb.ru
               </li>
               <li className="flex items-center gap-2">
                 <Icon name="Phone" size={16} className="text-primary" /> 8 800 555-35-35
@@ -562,7 +562,7 @@ const Index = () => {
           </div>
         </div>
         <div className="border-t border-border py-6 text-center text-sm text-muted-foreground">
-          © 2026 РобоВэп. Создано с помощью искусственного интеллекта.
+          © 2026 Roboweb. Создано с помощью искусственного интеллекта.
         </div>
       </footer>
     </div>
