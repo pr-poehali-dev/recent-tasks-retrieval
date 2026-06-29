@@ -1,0 +1,5 @@
+CREATE TABLE IF NOT EXISTS t_p52543339_recent_tasks_retriev.leads (
+  id SERIAL PRIMARY KEY,
+  email TEXT NOT NULL,
+  created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+);

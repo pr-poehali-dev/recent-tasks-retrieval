@@ -1,12 +1,13 @@
 import os
 import smtplib
 import json
+import psycopg2
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 
 
 def handler(event: dict, context) -> dict:
-    """Отправляет заявку с формы регистрации на почту roboweb.site@yandex.ru"""
+    """Сохраняет заявку в БД и отправляет письмо на roboweb.site@yandex.ru"""
 
     if event.get('httpMethod') == 'OPTIONS':
         return {
@@ -30,6 +31,20 @@ def handler(event: dict, context) -> dict:
             'body': {'error': 'Укажите корректный e-mail'}
         }
 
+    # Сохраняем в БД
+    conn = psycopg2.connect(os.environ['DATABASE_URL'])
+    try:
+        with conn.cursor() as cur:
+            schema = os.environ.get('MAIN_DB_SCHEMA', 'public')
+            cur.execute(
+                f"INSERT INTO {schema}.leads (email) VALUES (%s)",
+                (email,)
+            )
+        conn.commit()
+    finally:
+        conn.close()
+
+    # Отправляем письмо
     smtp_user = 'roboweb.site@yandex.ru'
     smtp_password = os.environ['SMTP_PASSWORD']
 
